@@ -1,18 +1,19 @@
+import itertools
+import math
 
-x = []
-t = 1
-while 1:
+x = 0
+n = 0
+for i in itertools.count(1):
+    x = 0
+    n += i
 
-    n = int((t/2)*(t+1))
-    # print(n)
-    x = (i for i in range(1, n+1) if not n % i)
-    # print(list(x))
-    if len(list(x)) > 500:
-        print(list(x))
+    t = 1
+    while t <= int(math.sqrt(n)):
+        if (n % t == 0):
+            x += 2
+        t += 1
+
+    if x > 500:
+        print(x)
         print(n)
         break
-    t += 1
-
-print(x)
-print(n)
-print(t)
