@@ -7,4 +7,4 @@ for idx in itertools.count(1):
         print(before)
         print(idx)
         break
-    before, after = after, before+after
+    before, after = after, before + after
